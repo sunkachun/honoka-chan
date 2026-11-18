@@ -46,8 +46,8 @@ func DefaultConfigs() *AppConfigs {
 	return &AppConfigs{
 		AppName: "honoka-chan",
 		Settings: Settings{
-			ListenPort:               "8080",
-			CdnServer:                "http://127.0.0.1:8080/static",
+			ListenPort:               "27483",
+			CdnServer:                "http://127.0.0.1:27483/static",
 			UnlockAllSpecialRotation: false,
 		},
 	}

@@ -9,7 +9,7 @@
 - `settings.cdn_server` 指向你的数据下载地址
 - `settings.session_key` 必须设置为随机生成的高强度密钥，至少 32 字节；可以使用 `openssl rand -base64 32` 生成
 - `settings.unlock_all_special_rotation` 可选；设为 `true` 后会忽略日替时间限制，直接解锁全部日替特殊歌曲，不包含周替 `MASTER`
-- 如果数据直接放在本项目的 `static` 目录下，通常可以配置成类似 `http://192.168.1.123/static`
+- 如果数据直接放在本项目的 `static` 目录下，通常可以配置成类似 `http://192.168.1.123:27483/static`。默认监听端口是 `27483`，避免和本机常见的 `8000`、`8080` 服务撞车。手机要填这台电脑的局域网 IP，不能填 `127.0.0.1`
 
 `session_key` 用于签名 Web 管理后台的登录 cookie。不要提交到公开仓库；更换它会让已有的后台登录 cookie 全部失效。缺少该配置或密钥长度不足时，服务不会启动。
 

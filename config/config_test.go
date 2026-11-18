@@ -14,8 +14,8 @@ func TestLoadCreatesDefaultConfig(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Load: %v", err)
 	}
-	if conf.Settings.ListenPort != "8080" {
-		t.Fatalf("ListenPort = %q, want 8080", conf.Settings.ListenPort)
+	if conf.Settings.ListenPort != "27483" {
+		t.Fatalf("ListenPort = %q, want 27483", conf.Settings.ListenPort)
 	}
 	if _, err := os.Stat(path); err != nil {
 		t.Fatalf("default config was not written: %v", err)
@@ -33,8 +33,8 @@ func TestLoadBacksUpInvalidConfig(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Load: %v", err)
 	}
-	if conf.Settings.ListenPort != "8080" {
-		t.Fatalf("ListenPort = %q, want 8080", conf.Settings.ListenPort)
+	if conf.Settings.ListenPort != "27483" {
+		t.Fatalf("ListenPort = %q, want 27483", conf.Settings.ListenPort)
 	}
 
 	entries, err := os.ReadDir(dir)
